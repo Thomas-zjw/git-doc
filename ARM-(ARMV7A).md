@@ -32,7 +32,7 @@ ARM分为[2]类寄存器，通用寄存器和状态寄存器；其中通用寄�
 
 通用寄存器包括R0~R15，同时分为3类
 
-<img src="C:\Users\XM\AppData\Roaming\Typora\typora-user-images\image-20200428232733598.png" alt="image-20200428232733598" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/Thomas-zjw/git-doc/master/image/image-20200428232733598.png" alt="image-20200428232733598" style="zoom:50%;" />
 
 ##### 2.1.1 未分组寄存器
 
@@ -58,13 +58,13 @@ CPSR：当前程序状态寄存器（1个）
 
 SPSR：备份程序状态寄存器（5个），用户模式和系统模式下没有该寄存器；当发生异常时，SPSR用于保存CPSR的当前值，从异常退出的时候可以由SPSR来恢复CPSR
 
-<img src="C:\Users\XM\AppData\Roaming\Typora\typora-user-images\image-20200429000213358.png" alt="image-20200429000213358" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/Thomas-zjw/git-doc/master/image/image-20200429000213358.png" alt="image-20200429000213358" style="zoom:50%;" />
 
 ##### 2.2.1 条件码标志位
 
 N、Z、C、V均为条件码标志位，他们的内容可以被算术或逻辑运算的结果改变，并且可以决定某条指令是否被执行
 
-<img src="C:\Users\XM\AppData\Roaming\Typora\typora-user-images\image-20200429193943028.png" alt="image-20200429193943028" style="zoom:80%;" />
+<img src="https://raw.githubusercontent.com/Thomas-zjw/git-doc/master/image/image-20200429193943028.png" alt="image-20200429193943028" style="zoom:80%;" />
 
 ##### 2.2.2 控制位
 
@@ -82,13 +82,13 @@ N、Z、C、V均为条件码标志位，他们的内容可以被算术或逻辑�
 
    M[4:0]用来**标识或设置**处理器的工作模式
 
-   <img src="C:\Users\XM\AppData\Roaming\Typora\typora-user-images\image-20200429195149218.png" alt="image-20200429195149218" style="zoom:50%;" />
+   <img src="https://raw.githubusercontent.com/Thomas-zjw/git-doc/master/image/image-20200429195149218.png" alt="image-20200429195149218" style="zoom:50%;" />
 
 ### 3. Arm指令系统
 
 #### 3.1指令和指令格式
 
-<img src="C:\Users\XM\AppData\Roaming\Typora\typora-user-images\image-20200430224107809.png" alt="image-20200430224107809" style="zoom:60%;" />
+<img src="https://raw.githubusercontent.com/Thomas-zjw/git-doc/master/image/image-20200430224107809.png" alt="image-20200430224107809" style="zoom:60%;" />
 
 Arm指令分为**5**域，
 
@@ -105,7 +105,7 @@ Arm指令分为**5**域，
 
 指令格式：
 
-<img src="C:\Users\XM\AppData\Roaming\Typora\typora-user-images\image-20200430224750010.png" alt="image-20200430224750010" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/Thomas-zjw/git-doc/master/image/image-20200430224750010.png" alt="image-20200430224750010" style="zoom:50%;" />
 
 <>中的内容必不可少，{}中的内容可省略
 
@@ -127,7 +127,7 @@ Arm指令分为**5**域，
 
 当CPSR中条件码被满足的时候，执行指令，否则指令被忽略
 
-<img src="C:\Users\XM\AppData\Roaming\Typora\typora-user-images\image-20200430234111032.png" alt="image-20200430234111032" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/Thomas-zjw/git-doc/master/image/image-20200430234111032.png" alt="image-20200430234111032" style="zoom:50%;" />
 
 #### 3.2Arm指令寻址方式
 
@@ -135,19 +135,19 @@ Arm指令分为**5**域，
 
 操作数本省就在指令中给出，例如：MOV R0，#15
 
-<img src="C:\Users\XM\AppData\Roaming\Typora\typora-user-images\image-20200501000356789.png" alt="image-20200501000356789" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/Thomas-zjw/git-doc/master/image/image-20200501000356789.png" alt="image-20200501000356789" style="zoom:50%;" />
 
 ##### 3.2.2寄存器寻址
 
 利用寄存器中的数值作为操作数，例如：ADD R0，R1，R2
 
-<img src="C:\Users\XM\AppData\Roaming\Typora\typora-user-images\image-20200501000323261.png" alt="image-20200501000323261" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/Thomas-zjw/git-doc/master/image/image-20200501000323261.png" alt="image-20200501000323261" style="zoom:50%;" />
 
 ##### 3.2.3寄存器间接寻址
 
 以寄存器中的值作为操作数的地址，例如：LDR R0，[R4]
 
-<img src="C:\Users\XM\AppData\Roaming\Typora\typora-user-images\image-20200501000256587.png" alt="image-20200501000256587" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/Thomas-zjw/git-doc/master/image/image-20200501000256587.png" alt="image-20200501000256587" style="zoom:50%;" />
 
 ##### 3.2.4寄存器位移寻址
 
@@ -155,7 +155,7 @@ Arm指令分为**5**域，
 
 例如：ADD R0，R1，R2，LSL #1
 
-<img src="C:\Users\XM\AppData\Roaming\Typora\typora-user-images\image-20200501000732584.png" alt="image-20200501000732584" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/Thomas-zjw/git-doc/master/image/image-20200501000732584.png" alt="image-20200501000732584" style="zoom:50%;" />
 
 ##### 3.2.5基址变址寻址
 
@@ -163,7 +163,7 @@ Arm指令分为**5**域，
 
 例如：LDR R0，[R1，#4]
 
-<img src="C:\Users\XM\AppData\Roaming\Typora\typora-user-images\image-20200501001213651.png" alt="image-20200501001213651" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/Thomas-zjw/git-doc/master/image/image-20200501001213651.png" alt="image-20200501001213651" style="zoom:50%;" />
 
 ##### 3.2.6多寄存器寻址
 
@@ -171,7 +171,7 @@ Arm指令分为**5**域，
 
 例如：LDMIA R0！，{R1-R4}
 
-<img src="C:\Users\XM\AppData\Roaming\Typora\typora-user-images\image-20200501173405954.png" alt="image-20200501173405954" style="zoom:50%;" />
+<img src="https://raw.githubusercontent.com/Thomas-zjw/git-doc/master/image/image-20200501173405954.png" alt="image-20200501173405954" style="zoom:50%;" />
 
 ##### 3.2.7堆栈寻址 （入栈、出栈）
 
@@ -197,7 +197,7 @@ Arm中分别采用LDMFD和STMFD指令来支持出栈和入栈操作，R13栈指�
 
    **低位用0来填充**
 
-   <img src="C:\Users\XM\AppData\Roaming\Typora\typora-user-images\image-20200502112857081.png" alt="image-20200502112857081" style="zoom:50%;" />
+   <img src="https://raw.githubusercontent.com/Thomas-zjw/git-doc/master/image/image-20200502112857081.png" alt="image-20200502112857081" style="zoom:50%;" />
 
    例如：MOVS R0，R1，LSL #1
 
@@ -207,7 +207,7 @@ Arm中分别采用LDMFD和STMFD指令来支持出栈和入栈操作，R13栈指�
 
    左移前的最高位送入C位
 
-   <img src="C:\Users\XM\AppData\Roaming\Typora\typora-user-images\image-20200502113606243.png" alt="image-20200502113606243" style="zoom:50%;" />
+   <img src="https://raw.githubusercontent.com/Thomas-zjw/git-doc/master/image/image-20200502113606243.png" alt="image-20200502113606243" style="zoom:50%;" />
 
 2. **LSR：逻辑右移**
 
@@ -375,13 +375,13 @@ STM指令用于将寄存器列表所指示的多个寄存器中的值存入到�
 
    STMIA R0!，{R1-R4}
 
-   <img src="C:\Users\XM\AppData\Roaming\Typora\typora-user-images\image-20200510224711990.png" alt="image-20200510224711990" style="zoom:50%;" />
+   <img src="https://raw.githubusercontent.com/Thomas-zjw/git-doc/master/image/image-20200510224711990.png" alt="image-20200510224711990" style="zoom:50%;" />
 
 2. IB每次传送前地址值加
 
    STMIB R0!，{R1-R4}
 
-   <img src="C:\Users\XM\AppData\Roaming\Typora\typora-user-images\image-20200510225037326.png" alt="image-20200510225037326" style="zoom:50%;" />
+   <img src="https://raw.githubusercontent.com/Thomas-zjw/git-doc/master/image/image-20200510225037326.png" alt="image-20200510225037326" style="zoom:50%;" />
 
 3. DA每次传送后地址值减
 
@@ -516,6 +516,8 @@ CP15有16个32位的寄存器，这里主要介绍C0和C1寄存器
    cache类型标识符寄存器
 
    
+
+### 5. MMU
 
 
 
